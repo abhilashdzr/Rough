@@ -1,33 +1,27 @@
 #pragma once
-#include <SDL2/SDL.h>
-
-#undef main
 
 #include <vector>
+
+#include <SDL2/SDL.h>
 
 class Window
 {
 public:
-	//void update(float deltaTime);
+	//void update();
 	//void handleEvents();
 	void clean();
 	void render();
 	bool running();
 
-	Window();
-	~Window();
 	//void calculateInitialWindowDimensions();
 
-	void init(const char* title, int xpos, int ypos, bool fullscreen);
+	void init(const char* title, int xpos, int ypos);
 	//void handleKeyDown(SDL_KeyboardEvent& key);
 	//void handleKeyUp(SDL_KeyboardEvent& key);
-	//void resizeWindow(int windowWidth, int windowHeight);
 	static SDL_Renderer* rend;
-	//static int screenHeight;
-	//static int screenWidth;
+	static int HEIGHT = WIDTH = 800;
+
 private:
 	bool isRunning;
 	SDL_Window* window;
-	bool frozen;
-
 };
