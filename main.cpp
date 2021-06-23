@@ -16,9 +16,9 @@ signed main()
 	while (windowFrame->running())
 	{
 		Start = SDL_GetTicks();
-		// windowFrame->handleEvents();
-		// windowFrame->update();
-		// windowFrame->render();
+		windowFrame->handleEvents();
+		//windowFrame->update();
+		windowFrame->render();
 		elapsed = SDL_GetTicks() - Start;
 		if (wait > elapsed)
 			SDL_Delay(wait - elapsed);
